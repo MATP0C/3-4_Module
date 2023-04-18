@@ -25,7 +25,6 @@ namespace _3_Module_String
             Console.WriteLine("\t Your height is {0} and your shoe size is {1}", Height, ShoeSize);
 
             Console.WriteLine("\t Do you have a pet ? " + Pet);
-            Console.WriteLine("\x23");
             switch (Color)
             {
                 case "red":
@@ -40,19 +39,21 @@ namespace _3_Module_String
 
                     Console.WriteLine("\tYour favorite color green");
                 break;
-                case "yellow":
-                    Console.BackgroundColor = ConsoleColor.Yellow;
-                    Console.ForegroundColor = ConsoleColor.Black;
-
-                    Console.WriteLine("\tYour favorite color yellow");
-                break;
-                default:
+                case "cyan":
                     Console.BackgroundColor = ConsoleColor.Cyan;
                     Console.ForegroundColor = ConsoleColor.Black;
 
                     Console.WriteLine("\tYour favorite color cyan");
                 break;
+                default:
+                    Console.BackgroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Red;
+
+                    Console.WriteLine("\tYour favorite color yellow");
+                break;
             }
+            Console.ResetColor();
+            Console.WriteLine("\x23");
             Console.ReadKey();
         }
     }
