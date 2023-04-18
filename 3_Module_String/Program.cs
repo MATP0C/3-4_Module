@@ -16,6 +16,8 @@ namespace _3_Module_String
             var ShoeSize = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Enter your height in centimeters :");
             var Height = Convert.ToByte(Console.ReadLine());
+            Console.WriteLine("Write your favorite color in English with a small letter");
+            var Color = Console.ReadLine(); 
 
             Console.WriteLine("\n Hellow World.");
             Console.WriteLine("\t Your name is {0}", Name);
@@ -24,6 +26,33 @@ namespace _3_Module_String
 
             Console.WriteLine("\t Do you have a pet ? " + Pet);
             Console.WriteLine("\x23");
+            switch (Color)
+            {
+                case "red":
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("\tYour favorite color red");
+                break;
+                case "green":
+                    Console.BackgroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("\tYour favorite color green");
+                break;
+                case "yellow":
+                    Console.BackgroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("\tYour favorite color yellow");
+                break;
+                default:
+                    Console.BackgroundColor = ConsoleColor.Cyan;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("\tYour favorite color cyan");
+                break;
+            }
             Console.ReadKey();
         }
     }
