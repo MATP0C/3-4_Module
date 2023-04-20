@@ -12,9 +12,13 @@ namespace _3_Module_String
             bool Pet = false;
 
             Console.WriteLine("Enter a name :");
-            Anketa.Name = Console.ReadLine();
-            Anketa.NameCount = Anketa.Name.Length;
-            Console.WriteLine("There are {0} letters in your name",Anketa.NameCount);
+            User.Name = Console.ReadLine();
+            Console.WriteLine("Enter your last name :");
+            User.LastName = Console.ReadLine();
+            Console.WriteLine("Enter your username:");
+            User.Login = Console.ReadLine();
+            User.LoginLength = User.Login.Length;
+            Console.WriteLine("The length of your login is {0}",User.LoginLength);
             Console.WriteLine("Enter the age :");
             Anketa.Age = Convert.ToByte(Console.ReadLine());
             Console.WriteLine("Enter your shoe size :");
