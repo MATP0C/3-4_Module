@@ -8,11 +8,13 @@ namespace _3_Module_String
     {
         static void Main(string[] args)
         {
-            ( string Name , byte Age, double ShoeSize, byte Height)Anketa;
+            ( string Name ,int NameCount, byte Age, double ShoeSize, byte Height)Anketa;
             bool Pet = false;
 
             Console.WriteLine("Enter a name :");
             Anketa.Name = Console.ReadLine();
+            Anketa.NameCount = Anketa.Name.Length;
+            Console.WriteLine("There are {0} letters in your name",Anketa.NameCount);
             Console.WriteLine("Enter the age :");
             Anketa.Age = Convert.ToByte(Console.ReadLine());
             Console.WriteLine("Enter your shoe size :");
