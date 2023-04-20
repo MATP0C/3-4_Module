@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net.Cache;
+using System.Xml.Linq;
 
 namespace _3_Module_String
 {
@@ -6,23 +8,24 @@ namespace _3_Module_String
     {
         static void Main(string[] args)
         {
+            ( string Name , byte Age, double ShoeSize, byte Height)Anketa;
             bool Pet = false;
 
             Console.WriteLine("Enter a name :");
-            string Name = Console.ReadLine();
+            Anketa.Name = Console.ReadLine();
             Console.WriteLine("Enter the age :");
-            var Age = Convert.ToByte(Console.ReadLine());
+            Anketa.Age = Convert.ToByte(Console.ReadLine());
             Console.WriteLine("Enter your shoe size :");
-            var ShoeSize = Convert.ToDouble(Console.ReadLine());
+            Anketa.ShoeSize = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Enter your height in centimeters :");
-            var Height = Convert.ToByte(Console.ReadLine());
+            Anketa.Height = Convert.ToByte(Console.ReadLine());
             Console.WriteLine("Write your favorite color in English with a small letter");
-            var Color = Console.ReadLine(); 
+            var Color = Console.ReadLine();
 
             Console.WriteLine("\n Hellow World.");
-            Console.WriteLine("\t Your name is {0}", Name);
-            Console.WriteLine("\t Your age is {0}", Age);
-            Console.WriteLine("\t Your height is {0} and your shoe size is {1}", Height, ShoeSize);
+            Console.WriteLine("\t Your name is {0}", Anketa.Name);
+            Console.WriteLine("\t Your age is {0}", Anketa.Age);
+            Console.WriteLine("\t Your height is {0} and your shoe size is {1}", Anketa.Height, Anketa.ShoeSize);
 
             Console.WriteLine("\t Do you have a pet ? " + Pet);
             switch (Color)
@@ -53,14 +56,6 @@ namespace _3_Module_String
                 break;
             }
             Console.ResetColor();
-            int[,] array = { { 1, 2, 3 }, { 5, 6, 7 }, { 8, 9, 10 }, { 11, 12, 13 } };
-            for (int i = 0; i < array.GetUpperBound(1) + 1; i++)
-            {
-                for (int k = 0; k < array.GetUpperBound(0) + 1; k++)
-                    Console.Write(array[k, i] + " ");
-
-                Console.WriteLine();
-            }
             Console.WriteLine("\x23");
             Console.ReadKey();
         }
