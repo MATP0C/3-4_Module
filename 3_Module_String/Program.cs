@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 using System.Net.Cache;
 using System.Xml.Linq;
 
@@ -32,20 +33,24 @@ namespace _3_Module_String
             User.LoginLength = User.Login.Length;
             Console.WriteLine("Длина вашего логина {0}",User.LoginLength);
 
-            Console.WriteLine("Enter the age :");
-            Anketa.Age = Convert.ToByte(Console.ReadLine());
-            Console.WriteLine("Enter your shoe size :");
-            Anketa.ShoeSize = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter your height in centimeters :");
-            Anketa.Height = Convert.ToByte(Console.ReadLine());
+            Console.WriteLine("Введите ваш возраст:");
+            User.Age = Convert.ToByte(Console.ReadLine());
+
+            Console.WriteLine("Введите ваш размер обуви:");
+            User.ShoeSize = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Введите ваш рост:");
+            User.Height = Convert.ToByte(Console.ReadLine());
+
+            User.favcolors = new string[3];
+            Console.WriteLine("Введите три любимых цвета:");
+            for (int i = 0; i < User.favcolors.Length; i++)
+            {
+                User.favcolors[i] = Console.ReadLine();
+            }
+
             Console.WriteLine("Write your favorite color in English with a small letter");
             var Color = Console.ReadLine();
-
-            Console.WriteLine("\n Hellow World.");
-            Console.WriteLine("\t Your name is {0}", Anketa.Name);
-            Console.WriteLine("\t Your age is {0}", Anketa.Age);
-            Console.WriteLine("\t Your height is {0} and your shoe size is {1}", Anketa.Height, Anketa.ShoeSize);
-
             switch (Color)
             {
                 case "red":
