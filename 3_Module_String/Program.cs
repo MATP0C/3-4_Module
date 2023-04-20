@@ -9,16 +9,29 @@ namespace _3_Module_String
         static void Main(string[] args)
         {
             ( string Name , string LastName,string Login, int LoginLength, bool HasPet, byte Age, string[] favcolors, double ShoeSize, byte Height)User;
-            bool Pet = false;
 
-            Console.WriteLine("Enter a name :");
+            Console.WriteLine("Введите ваше имя:");
             User.Name = Console.ReadLine();
-            Console.WriteLine("Enter your last name :");
+
+            Console.WriteLine("Введите вашу фамилию:");
             User.LastName = Console.ReadLine();
-            Console.WriteLine("Enter your username:");
+
+            Console.WriteLine("Есть ли у вас животные? Да или нет");
+            var result = Console.ReadLine();
+            if (result == "Да")
+            {
+                User.HasPet = true;
+            }    
+            else
+            {
+                User.HasPet = false;
+            }
+
+            Console.WriteLine("Введите ваш логин:");
             User.Login = Console.ReadLine();
             User.LoginLength = User.Login.Length;
-            Console.WriteLine("The length of your login is {0}",User.LoginLength);
+            Console.WriteLine("Длина вашего логина {0}",User.LoginLength);
+
             Console.WriteLine("Enter the age :");
             Anketa.Age = Convert.ToByte(Console.ReadLine());
             Console.WriteLine("Enter your shoe size :");
@@ -33,7 +46,6 @@ namespace _3_Module_String
             Console.WriteLine("\t Your age is {0}", Anketa.Age);
             Console.WriteLine("\t Your height is {0} and your shoe size is {1}", Anketa.Height, Anketa.ShoeSize);
 
-            Console.WriteLine("\t Do you have a pet ? " + Pet);
             switch (Color)
             {
                 case "red":
