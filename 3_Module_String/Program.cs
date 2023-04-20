@@ -8,7 +8,7 @@ namespace _3_Module_String
     {
         static void Main(string[] args)
         {
-            ( string Name ,int NameCount, byte Age, double ShoeSize, byte Height)Anketa;
+            ( string Name , string LastName,string Login, int LoginLength, bool HasPet, byte Age, string[] favcolors, double ShoeSize, byte Height)User;
             bool Pet = false;
 
             Console.WriteLine("Enter a name :");
