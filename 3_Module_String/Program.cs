@@ -53,6 +53,10 @@ namespace _3_Module_String
                 break;
             }
             Console.ResetColor();
+            for (int i = Name.Length - 1; i >= 0; i--)
+            {
+                Console.WriteLine(Name[i] + " ");
+            }
             Console.WriteLine("\x23");
             Console.ReadKey();
         }
