@@ -9,7 +9,7 @@ namespace _3_Module_String
     {
         static void Main(string[] args)
         {
-            ( string Name , string LastName,string Login, int LoginLength, bool HasPet, byte Age, string[] favcolors, double ShoeSize, byte Height)User;
+            ( string Name , string LastName,string Login, int LoginLength, bool HasPet, byte Age, string[] favcolors, double ShoeSize, byte Height) User;
 
             for (int k = 0; k < 3; k++)
             {
